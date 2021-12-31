@@ -1,0 +1,121 @@
+:root {
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --white: #fff;
+}
+
+html,
+body {
+  margin: 0;
+  font-size: 13px;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background: var(--light-grayish-blue);
+  display: grid;
+  place-items: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.article-card {
+  max-width: 350px;
+  background: var(--white);
+  border-radius: 10px;
+  margin: 2rem;
+  box-shadow: 0px 10px 50px #c0cbd8;
+}
+.article-card__content {
+  padding: 2rem 2.5rem 1.7rem;
+}
+.article-card__image {
+  max-height: 200px;
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.article-card__title, .article-card__description, .article-card__author-name {
+  color: var(--dark-grayish-blue);
+}
+.article-card__title {
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  font-weight: 700;
+  line-height: clamp(2rem, 2vw, 2.7rem);
+}
+.article-card__description {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: clamp(1.6rem, 2vw, 1.8rem);
+  font-weight: 500;
+}
+.article-card__footer, .article-card__author {
+  display: flex;
+  align-items: center;
+}
+.article-card__footer {
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+.article-card__author-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 1.2rem;
+}
+.article-card__author-name, .article-card__author-post-date {
+  margin: 0;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+.article-card__author-name {
+  font-weight: 700;
+}
+.article-card__author-post-date {
+  color: var(--grayish-blue);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.article-card__share {
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem;
+}
+
+.attribution {
+  text-align: center;
+  color: var(--desaturated-dark-blue);
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  margin: 1.5rem;
+}
+.attribution a {
+  font-weight: 700;
+  color: var(--dark-grayish-blue);
+}
+
+@media (min-width: 769px) {
+  .article-card {
+    display: flex;
+    max-width: 900px;
+  }
+  .article-card__content {
+    padding: 2.5rem 3rem 3rem;
+  }
+  .article-card__image {
+    max-height: initial;
+    max-width: 350px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    object-fit: unset;
+  }
+  .article-card__footer {
+    margin-top: 1rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
